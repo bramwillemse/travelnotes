@@ -1,0 +1,152 @@
+/****** 
+ * Base 
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 100%; 
+}
+
+h1, 
+h2,
+h3, 
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    appearance: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+figure,
+figcaption {
+    display: inline-block;
+    max-width: 100%;
+    margin: 0;
+
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+figcaption {
+    font-style: italic;
+}
+
+
+/******
+ * Modules
+ */
+
+/** 
+ * Header 
+ */
+.header {
+    margin: 1rem auto;
+    max-width: 1024px;
+}
+
+.header h1 {
+    display: inline-block;
+}
+
+/** 
+ * Navigation
+ */
+.nav {
+    float: right;
+    display: inline-block;
+
+    font-size: 2rem;
+}
+
+/** 
+ * Notes
+ * 
+ * The big collection of notes
+ */
+.notes {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+/** 
+ * Note
+ * 
+ * A single note
+ */
+.note {
+    display: block;
+    position: relative;
+    
+    margin-bottom: 0.333rem;
+    margin-left: 1rem;
+}
+
+    .note:before {
+        position: absolute;
+        left: -1rem;
+    }
+
+    .note--is-collapsed:before {
+        content: "➕";
+    }
+
+    .note--is-expanded:before {
+        top: 0.5rem;
+
+        content: "➖";
+    }
+
+
+.note__entry {
+    display: block;
+    width: 100%;
+    margin: 0;
+
+    padding: 0.333rem;
+}
+
+    .note__entry:hover {
+        background: #EEE;
+
+        cursor: text;
+    }
+
+    .note__entry--placeholder {
+        color: #CCC;
+
+        &:focus {
+            content: '';
+        }
+
+    }    
+
+
+.note__meta {
+    visibility: hidden;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.note:hover > .note__meta,
+.note:focus > .note__meta,
+.note:hover > .note__meta:hover {
+    visibility: visible;
+}

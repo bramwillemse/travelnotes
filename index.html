@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Travel Notes</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Travel Notes</h1>
+
+        <nav class="nav js-nav">
+            <a href="#">🔎</a>
+            <a href="#">⚙</a>
+            <a href="#">👤</a>
+        </nav>
+    </header>
+
+    <main class="notes">
+
+        <article class="note note--is-expanded level-1 js-note">
+            <div class="note__entry" contenteditable>
+                <h1>Colombia</h1>
+
+                <figure>
+                    <img src="https://placekitten.com/g/640/420" alt="Colombian kittens">
+                    <figcaption>Colombian kittens</figcaption>
+                </figure>
+            </div>
+
+            <span class="note__meta">
+                <button class="meta__location" title="Location">🌍</button>
+                <button class="meta__url" title="URL">🔗</button>
+                <button class="meta__share" title="Share">💬</button>
+            </span>
+
+            <div class="note note--is-collapsed level-2 js-note">
+                <span class="note__entry" contenteditable>
+                    Cartagena
+                </span>
+
+                <span class="note__meta">
+                    <button class="meta__location" title="Location">🌍</button>
+                    <button class="meta__url" title="URL">🔗</button>
+                    <button class="meta__share" title="Share">💬</button>
+                </span>
+
+            </div>
+
+            <div class="note note--is-collapsed level-2 js-note">
+                <span class="note__entry" contenteditable>
+                    Minca
+                </span>
+
+                <span class="note__meta">
+                    <button class="meta__location" title="Location">🌍</button>
+                    <button class="meta__url" title="URL">🔗</button>
+                    <button class="meta__share" title="Share">💬</button>
+                </span>
+                
+            </div>
+
+        </article>
+
+
+        <article class="note note--is-collapsed level-1 js-note">
+            <div class="note__entry" contenteditable>
+                <h1>Peru</h1>
+            </div>
+
+            <span class="note__meta">
+                <button class="meta__location" title="Location">🌍</button>
+                <button class="meta__url" title="URL">🔗</button>
+                <button class="meta__share" title="Share">💬</button>
+            </span>
+
+        </article>
+
+
+        <article class="note note--is-collapsed level-1 js-note">
+            
+            <div class="note__entry note__entry--placeholder" contenteditable>
+                <h1>Where to next?</h1>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!--
+    <footer>
+        Created by <a href="https://bramwillemse.nl/">Bram Willemse</a>
+    </footer>
+    -->
+    
+    <script src="src/scripts/main.js"></script>
+</body>
+</html>
