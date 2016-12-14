@@ -19,6 +19,10 @@ h4 {
     padding: 0;
 }
 
+p {
+    display: inline;
+}
+
 button {
     appearance: none;
 }
@@ -97,19 +101,21 @@ figcaption {
     margin-left: 1rem;
 }
 
-    .note:before {
+    .note::before {
         position: absolute;
         left: -1rem;
     }
 
-    .note--is-collapsed:before {
-        content: "➕";
+    .note::before {
+        content: "*"
     }
 
-    .note--is-expanded:before {
-        top: 0.5rem;
+    .note--is-collapsed::before {
+        content: "+";
+    }
 
-        content: "➖";
+    .note--is-expanded::before {
+        content: "-";
     }
 
 
@@ -131,7 +137,7 @@ figcaption {
         color: #CCC;
 
         &:focus {
-            content: '';
+            content: "";
         }
 
     }    

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"box",
+				"box-sizing"
+			],
+			[
 				"items",
 				"itemsFlexbox〔variable〕"
 			],
@@ -47,6 +51,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/bramwillemse/Dropbox/Sites/tvn/src/styles/main.css",
+			"settings":
+			{
+				"buffer_size": 1751,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/bramwillemse/Dropbox/Sites/tvn/index.html",
+			"settings":
+			{
+				"buffer_size": 8718,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -55,10 +77,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 225.0,
-		"last_filter": "settings",
+		"height": 159.0,
+		"last_filter": "javascr",
 		"selected_items":
 		[
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"settings",
 				"Preferences: Settings"
@@ -411,10 +437,18 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/bramwillemse/Dropbox/Sites/tvn"
+		"/Users/bramwillemse/Dropbox/Sites/tvn",
+		"/Users/bramwillemse/Dropbox/Sites/tvn/src",
+		"/Users/bramwillemse/Dropbox/Sites/tvn/src/scripts",
+		"/Users/bramwillemse/Dropbox/Sites/tvn/src/styles"
 	],
 	"file_history":
 	[
+		"/Users/bramwillemse/Dropbox/Sites/tvn/src/scripts/main.js",
+		"/Users/bramwillemse/Dropbox/Sites/tvn/dist/css/main.css",
+		"/Users/bramwillemse/Dropbox/Sites/tvn/dist/js/main.js",
+		"/Users/bramwillemse/Dropbox/Sites/tvn/_assets/tv.sublime-project",
+		"/Users/bramwillemse/Dropbox/Sites/_sublime projects/hma-theme.sublime-project",
 		"/Users/bramwillemse/Dropbox/Sites/es6/code/19-destructuring-arrays.html",
 		"/Users/bramwillemse/Dropbox/Sites/es6/code/18-destructuring-objects.html",
 		"/Users/bramwillemse/Dropbox/Sites/es6/code/17-new-string-methods.html",
@@ -537,16 +571,11 @@
 		"/Users/bramwillemse/Dropbox/Sites/wtn/waternet-global-waternet/gitignore",
 		"/Users/bramwillemse/Dropbox/Sites/wtn/waternet-global-waternet/.git/rebase-merge/git-rebase-todo",
 		"/Users/bramwillemse/Dropbox/Sites/_sublime projects/wtn.sublime-project",
-		"/Users/bramwillemse/Dropbox/Sites/wtn/waternet-global-waternet/src/backend/Waternet.Global.Web/Sass/move-files.sh",
-		"/Volumes/C/projects/waternet-global-waternet/src/backend/Waternet.Global.Web/Sass/move-files.sh",
-		"/Volumes/C/projects/waternet-global-waternet/src/backend/Waternet.Global.Web/Sass/Core/layout/_flex-grid.scss",
-		"/Volumes/C/projects/waternet-global-waternet/src/backend/Waternet.Global.Web/Sass/Core/vars/waternet/_grid.scss",
-		"/Volumes/C/projects/waternet-global-waternet/src/backend/Waternet.Global.Web/Sass/Core/elements/_media.scss",
-		"/Users/bramwillemse/Dropbox/Sites/wtn/.gitignore"
+		"/Users/bramwillemse/Dropbox/Sites/wtn/waternet-global-waternet/src/backend/Waternet.Global.Web/Sass/move-files.sh"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -618,6 +647,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			":before",
+			"<span class=\"note__meta\">",
+			"h1",
+			"<button class=\"note__toggle js-note-toggle\">➕</button>",
+			"/a href=\"#\"",
+			"button",
+			"note__toggle",
+			"class=\"note ",
+			"{$",
+			"<a ",
+			"button",
+			"<button ",
+			"+",
+			"class=\"note ",
+			"class=\"note",
+			"<span class=\"\"",
+			"<div class=\"note note--is-collapsed level-2\">",
+			"span",
+			"note",
+			"&",
+			"    &--",
+			"node",
 			"div",
 			"highlight-block",
 			"kwijtscheldingcontroller",
@@ -723,29 +774,7 @@
 			"uglify",
 			"checkurlparam",
 			"showbetaalgegevens",
-			"betaalgegevens",
-			"GenericHelper",
-			"paymentformcontroller",
-			"contentService",
-			"contentServiceDrinkwater",
-			"--homepage",
-			"container--homepage",
-			"container-homepage",
-			"Modules/",
-			"Modules",
-			"Components/Waternet",
-			"Blocks/Waternet/",
-			"BOOTCAMP/",
-			"/C/p",
-			".",
-			"src/backend/",
-			".",
-			"src/",
-			"html5wp_pagination",
-			"html5wp_excerpt",
-			"remove_menus",
-			"my_wp_nav_menu_args",
-			"t5_remove_version"
+			"betaalgegevens"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -763,8 +792,70 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/bramwillemse/Dropbox/Sites/tvn/src/styles/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								823,
+								823
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"color_scheme": "Packages/User/Color Highlighter/themes/cobalt2.tmTheme",
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1366.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/bramwillemse/Dropbox/Sites/tvn/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7458,
+								7458
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"auto_complete": false,
+							"color_scheme": "Packages/User/Color Highlighter/themes/cobalt2.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2218.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1334,9 +1425,17 @@
 	"select_project":
 	{
 		"height": 751.0,
-		"last_filter": "wtn",
+		"last_filter": "hma",
 		"selected_items":
 		[
+			[
+				"hma",
+				"~/Dropbox/Sites/_sublime projects/hma.sublime-project"
+			],
+			[
+				"",
+				"~/Dropbox/Sites/_sublime projects/wtn.sublime-workspace"
+			],
 			[
 				"wtn",
 				"~/Dropbox/Sites/_sublime projects/wtn.sublime-project"
@@ -1344,10 +1443,6 @@
 			[
 				"wtnmijn",
 				"~/Dropbox/Sites/_sublime projects/wtn-mijn-waternet.sublime-project"
-			],
-			[
-				"",
-				"~/Dropbox/Sites/_sublime projects/wtn.sublime-project"
 			],
 			[
 				"brw",
@@ -1387,10 +1482,6 @@
 			],
 			[
 				"hmathe",
-				"~/Dropbox/Sites/_sublime projects/hma-theme.sublime-project"
-			],
-			[
-				"hma",
 				"~/Dropbox/Sites/_sublime projects/hma-theme.sublime-project"
 			],
 			[
