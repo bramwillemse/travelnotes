@@ -15,13 +15,13 @@ var	reload = browserSync.reload;
 gulp.task('watch', function() {
     
     // Watch Templates
-    gulp.watch('./**/*.php', reload);
+    // gulp.watch('./**/*.php', reload);
 
 	// Watch Sass
-    gulp.watch('./src/sass/**/*.scss', ['style']);
+    gulp.watch('./src/styles/**/*.scss', ['style']);
 
     // Watch scripts
-    gulp.watch('./src/js/**/*.js', ['scripts', reload]);
+    gulp.watch('./src/scripts/**/*.js', ['scripts', reload]);
 
     // Watch image files
     // gulp.watch('./src/img/raster/*', ['images']);

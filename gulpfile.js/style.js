@@ -31,7 +31,7 @@ var plugins = [
 
 gulp.task('style:lint', function(){
     return gulp.src([
-        './src/sass/*.scss',
+        './src/styles/*.scss',
         '!.src/sass/vendor/**.*.scss'
     ])
     .pipe(postcss(plugins, {syntax: syntax_scss}))
@@ -42,8 +42,8 @@ gulp.task('style:lint', function(){
 // Task: Compile sass into CSS, compress and auto-inject into browsers
 gulp.task('style', ['style:lint'] ,function() {
 	return gulp.src([
-			'./src/sass/*.scss',
-			'!.src/sass/**/_*.scss'
+			'./src/styles/*.scss',
+			'!.src/styles/**/_*.scss'
 		])
 		.pipe(sourcemaps.init())
 		.pipe(

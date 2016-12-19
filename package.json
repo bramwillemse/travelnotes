@@ -33,6 +33,8 @@
     "postcss-reporter": "^1.4.1",
     "require-dir": "^0.3.0",
     "stylelint": "^7.5.0",
+    "stylelint-order": "^0.2.2",
+    "stylelint-selector-bem-pattern": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
