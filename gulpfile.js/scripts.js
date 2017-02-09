@@ -24,14 +24,15 @@ var reload = browserSync.reload;
 var uglifyOptions = {
         mangle: true,
         output: { beautify: false },
-        outSourceMap: true
+        outSourceMap: true,
+        sourceMaps: true
     };
 
 
 // Main scripts task
 //Convert ES6 ode in all js files in src/js folder and copy to
 //build folder as bundle.js
-gulp.task('scripts', ['scripts:lint'], function(){
+gulp.task('scripts', /*['scripts:lint'],*/ function(){
     return browserify({
         entries: ['./src/scripts/app.js'],
         debug: true
@@ -45,7 +46,8 @@ gulp.task('scripts', ['scripts:lint'], function(){
     .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
     .pipe(uglify(uglifyOptions))
     .pipe(rename({
-        suffix: '.min'
+        suffix: '.min',
+        sourceMaps: true
     }))
     .pipe(gulp.dest('./dist/scripts'))
     .pipe(sourcemaps.write('.'))

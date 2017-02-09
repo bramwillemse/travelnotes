@@ -51,12 +51,12 @@ gulp.task('style', ['style:lint'] ,function() {
 				sourceComments: 'map',
 				errLogToConsole: true
 			}).on('error', sass.logError))
-		.pipe(gulp.dest('dist/css'))
+		.pipe(gulp.dest('dist/styles'))
 		.pipe(minify({sourceMap: true}))
 		.pipe(rename({
 			suffix: '.min'
 		}))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('dist/css'))
+		.pipe(gulp.dest('dist/styles'))
 		.pipe(browserSync.stream());
 });

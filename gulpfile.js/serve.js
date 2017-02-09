@@ -11,6 +11,6 @@ var gulp = require('gulp'),
 // Task: Static Server
 gulp.task('serve', function() {
     browserSync.init({
-        proxy: "travelnotes.dev"
+        proxy: "tvn.dev"
     });
 });

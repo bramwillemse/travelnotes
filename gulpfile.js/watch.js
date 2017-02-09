@@ -15,7 +15,7 @@ var	reload = browserSync.reload;
 gulp.task('watch', function() {
     
     // Watch Templates
-    // gulp.watch('./**/*.php', reload);
+    gulp.watch('./**/*.html', reload);
 
 	// Watch Sass
     gulp.watch('./src/styles/**/*.scss', ['style']);
