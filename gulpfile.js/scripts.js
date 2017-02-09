@@ -33,7 +33,7 @@ var uglifyOptions = {
 //build folder as bundle.js
 gulp.task('scripts', ['scripts:lint'], function(){
     return browserify({
-        entries: ['./src/scripts/main.js'],
+        entries: ['./src/scripts/app.js'],
         debug: true
     })
     .transform(babelify.configure({
@@ -41,7 +41,7 @@ gulp.task('scripts', ['scripts:lint'], function(){
         sourceMaps: true
     }))
     .bundle()
-    .pipe(source('main.js'))
+    .pipe(source('app.js'))
     .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
     .pipe(uglify(uglifyOptions))
     .pipe(rename({
