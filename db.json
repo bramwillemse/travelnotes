@@ -1,0 +1,14 @@
+{
+  "notes": [
+    { 
+        "id": 1, 
+        "title": "Dikke note voor Bram", 
+        "location": {
+            "lat": "38.898648N",
+            "lon": "77.037692W"
+        },
+        "author": "Stef Thoen",
+        "author_email": "stef@baardbaard.nl" 
+    }
+  ]
+}
