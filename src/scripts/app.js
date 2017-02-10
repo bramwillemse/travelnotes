@@ -1,4 +1,6 @@
-var Vue = require('vue');
+import Vue from 'vue';
+import api from './services/api';
+
 
 Vue.component('notes', {
     template: `
@@ -16,17 +18,14 @@ Vue.component('notes', {
     },
 
     methods : {
-        showData() {
-            console.log('test:' + data.notes);
-        }
+        // showData() {
+        //     console.log('test:' + data.notes);
+        // }
     },
 
     created() {
-        return fetch('http://localhost:3004/notes')
-            .then(response => this.notes = response.json)
-
-        showData()
-
+        return api.getNotes()
+            .then(response => console.log(response.json))
     }
 })
 
