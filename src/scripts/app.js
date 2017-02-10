@@ -24,8 +24,8 @@ Vue.component('notes', {
     },
 
     created() {
-        return Api.getNotes()
-            .then(response => console.log(response.json))
+        return api.getNotes()
+            .then(response => this.notes = response)
     }
 })
 
