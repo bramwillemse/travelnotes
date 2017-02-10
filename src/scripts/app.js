@@ -1,33 +1,7 @@
-import Vue from 'vue';
-import { api } from './services/api';
+import Vue from 'vue'
 
+import { notes } from './components/notes'
 
-Vue.component('notes', {
-    template: `
-        <ul class="notes">
-            <li v-for="note in notes">
-                {{note.text}}
-            </li>
-        </ul>
-    `,
-
-    data() { 
-        return {
-            notes: []
-        }
-    },
-
-    methods : {
-        // showData() {
-        //     console.log('test:' + data.notes);
-        // }
-    },
-
-    created() {
-        return api.getNotes()
-            .then(response => this.notes = response)
-    }
-})
 
 new Vue({
     el: '#app'
