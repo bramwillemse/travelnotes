@@ -6,7 +6,7 @@ Vue.component('notes', {
     template: `
         <ul class="notes">
             <li v-for="note in notes">
-                test
+                {{note.text}}
             </li>
         </ul>
     `,
