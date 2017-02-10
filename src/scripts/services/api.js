@@ -12,7 +12,7 @@ const apiBaseURL = 'http://localhost:3003';
  * // Use classes' methods to interact with the API.
  * api.getNote(1);
  */
-class api {
+class Api {
 
     /**
      * Get a note.
@@ -129,7 +129,6 @@ class api {
                 body: JSON.stringify(note)
             })
     }
-
 }
 
-export default api;
+export let api = new Api()

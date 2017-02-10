@@ -11,7 +11,6 @@ var debug = require('gulp-debug');
 var browserify = require('browserify');
 var babelify = require('babelify');
 
-var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
 var eslint = require('gulp-eslint');
 var buffer = require('vinyl-buffer');
@@ -22,8 +21,8 @@ var reload = browserSync.reload;
 
 
 // Main scripts task
-//Convert ES6 ode in all js files in src/js folder and copy to
-//build folder as bundle.js
+// Convert ES6 ode in all js files in src/js folder and copy to
+// build folder as bundle.js
 gulp.task('scripts', /*['scripts:lint'],*/ function(){
     return browserify({
         entries: ['./src/scripts/app.js'],
@@ -37,12 +36,11 @@ gulp.task('scripts', /*['scripts:lint'],*/ function(){
     .pipe(source('app.js'))
     .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
     .pipe(sourcemaps.init())
-    .pipe(plumber())    
-    .pipe(uglify())
-    .pipe(rename({
-        suffix: '.min',
-        sourceMaps: true
-    }))
+    // .pipe(uglify())
+    // .pipe(rename({
+    //     suffix: '.min',
+    //     sourceMaps: true
+    // }))
     .pipe(gulp.dest('./dist/scripts'))
     .pipe(sourcemaps.write('.'))
     .pipe(reload({stream:true}))

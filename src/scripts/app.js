@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import api from './services/api';
+import { api } from './services/api';
 
 
 Vue.component('notes', {
@@ -24,7 +24,7 @@ Vue.component('notes', {
     },
 
     created() {
-        return api.getNotes()
+        return Api.getNotes()
             .then(response => console.log(response.json))
     }
 })
