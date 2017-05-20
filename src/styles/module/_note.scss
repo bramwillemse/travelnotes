@@ -1,0 +1,30 @@
+/** 
+ * Note
+ * A single note
+ */
+.note {
+    display: block;
+    position: relative;
+    
+    margin: 0 1rem 2rem;
+}
+
+.note__title {
+    margin-bottom: 0;
+}
+
+.note__location {
+    font-size: .666rem;
+    font-weight: 400;
+}
+
+.note__text {
+    margin-bottom: .5rem;
+}
+
+.note__meta {
+    display: inline-block;
+
+    font-size: .666em;
+    font-style: italic;
+}

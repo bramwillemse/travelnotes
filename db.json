@@ -1,20 +1,73 @@
 {
-  "notes": [
-    {
-      "id": 1,
-      "location": {
-        "lat": "38.898648N",
-        "lon": "77.037692W"
-      },
-      "text": "Dikke note 1  voor Bram"
-    },
-    {
-      "id": 2,
-      "location": {
-        "lat": "38.898648N",
-        "lon": "77.037692W"
-      },
-      "text": "Dikke note 2 voor Bram"
-    }
-  ]
+    "notes": [{
+        "id": 1,
+        "location": {
+            "country": "Argentina",
+            "city": "Buenos Aires",
+            "lat": "-34.577080",
+            "lon": "-58.403621"
+        },
+        "title": "Museum Malba",
+        "text": "Modern art from different countries"
+    }, {
+        "id": 2,
+        "location": {
+            "country": "Argentina",
+            "city": "Buenos Aires",
+            "lat": "-34.590477",
+            "lon": "-58.423486"
+        },
+        "title": "Art Factory Palermo",
+        "text": "Nice hostel in a gentrified neighbourhood of BA"
+    }, {
+        "id": 3,
+        "location": {
+            "country": "Argentina",
+            "city": "Buenos Aires",
+            "lat": "-34.589546",
+            "lon": "-58.397364"
+        },
+        "title": "Recoleta",
+        "text": "This is basically where all the rich porteños live so a bit boring but beautiful to walk round."
+    }, {
+        "id": 4,
+        "location": {
+            "country": "Argentina",
+            "city": "Buenos Aires",
+            "lat": "-34.597679",
+            "lon": "-58.443019"
+        },
+        "title": "Villa Crespo",
+        "text": "is quite up-and-coming too (apparently like Palermo 15 years ago) and there are cool restaurants and bars around there – it’s close to Palermo too. Me thinks there are some good hsotels around there."
+    }, {
+        "id": 5,
+        "location": {
+            "country": "Argentina",
+            "city": "Buenos Aires",
+            "lat": "-34.607924",
+            "lon": "-58.374815"
+        },
+        "title": "El microcentro",
+        "text": "The most famous and fun hostel is in el microcentro, called Millhouse. However, el microcentro is not that nice. Lots of famous tourist attractions are around there (Casa Rosada etc) but it’s a bit industrial and not that nice. Palermo is just so cool in comparison."
+    }, {
+        "id": 6,
+        "location": {
+            "country": "Argentina",
+            "city": "Buenos Aires",
+            "lat": "-34.634496",
+            "lon": "-58.363134"
+        },
+        "title": "Go to La Boca",
+        "text": "but do NOT stray off the tourist path. Seriously, don’t. I actually don’t rate it that much as it’s soooo touristy and hyped up – it’s the street called el caminito with all the brightly coloured houses with tango dancers trying to get as much £ from you as poss – but I guess it’s worth going there to see it."
+    }, {
+        "id": 7,
+        "location": {
+            "country": "Argentina",
+            "city": "Buenos Aires",
+            "lat": "-34.587609",
+            "lon": "-58.428555"
+        },
+        "title": "Burguer Joint",
+        "text": "Awesome burger joint with plain f*cking good burgers, good music and vibes. Young, hipsterish crowd."
+    }]
 }
