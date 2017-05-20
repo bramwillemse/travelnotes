@@ -1,35 +1,18 @@
-
-
 /** 
  * Note
- * 
  * A single note
  */
 .note {
     display: block;
     position: relative;
     
-    margin-bottom: 0.333rem;
-    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
     .note::before {
         position: absolute;
         left: -1rem;
     }
-
-    .note::before {
-        content: "*"
-    }
-
-    .note--is-collapsed::before {
-        content: "+";
-    }
-
-    .note--is-expanded::before {
-        content: "-";
-    }
-
 
 .note__entry {
     display: block;

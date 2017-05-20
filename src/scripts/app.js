@@ -1,8 +1,8 @@
 import Vue from 'vue'
 
-import { notes } from './components/notes'
-
+import notes from './components/notes'
 
 new Vue({
-    el: '#app'
+    el: '#app',
+    components: { notes: notes}
 })
