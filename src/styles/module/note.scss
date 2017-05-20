@@ -9,38 +9,36 @@
     margin-bottom: 1rem;
 }
 
-    .note::before {
-        position: absolute;
-        left: -1rem;
-    }
+.note:before {
+    position: absolute;
+    left: -1rem;
+}
 
 .note__entry {
     display: block;
     width: 100%;
     margin: 0;
 
-    padding: 0.333rem;
+    padding: .333rem;
 }
 
-    .note__entry:hover {
-        background: #EEE;
+.note__entry:hover {
+    background: #EEE;
 
-        cursor: text;
+    cursor: text;
+}
+
+.note__entry--placeholder {
+    color: #CCC;
+
+    &:focus {
+        content: "";
     }
-
-    .note__entry--placeholder {
-        color: #CCC;
-
-        &:focus {
-            content: "";
-        }
-
-    }    
-
+}
 
 .note__meta {
-    visibility: hidden;
     display: inline-block;
+    visibility: hidden;
     position: absolute;
     top: 0;
     right: 0;

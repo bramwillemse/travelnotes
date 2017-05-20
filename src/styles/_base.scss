@@ -10,7 +10,10 @@
 
 html {
     font-family: sans-serif;
-    font-size: 100%;
+}
+
+body { 
+    font-size: 18px;
 }
 
 h1,
@@ -27,6 +30,8 @@ p {
 
 button {
     appearance: none;
+
+    padding: 1rem;
 }
 
 button:hover {
