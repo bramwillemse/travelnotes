@@ -1,23 +1,31 @@
 /** 
- * Base
+ * BASE
  */
 @import "base";
 
 
-/**
- * Module
- */
-@import "module/header";
-
-@import "module/notes";
-@import "module/note";
-
-
 /** 
- * Layout 
+ * LAYOUT 
  */
 @import "layout/l-container";
 
+
+/** 
+ * ELEMENT
+ */
+@import "element/button";
+@import "element/input";
+
+
+/**
+ * MODULE
+ */
+@import "module/header";
+@import "module/form";
+@import "module/modal";
+@import "module/notes";
+@import "module/note";
+@import "module/suggestions";
 
 /** 
  * Theme

@@ -53,8 +53,7 @@ p {
 
 button {
     appearance: none;
-
-    padding: 1rem;
+    -webkit-appearance: none;
 }
 
 button:hover {
