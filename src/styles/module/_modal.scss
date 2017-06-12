@@ -1,0 +1,21 @@
+/** 
+ * MODAL
+ * Full screen overlay
+ */
+.modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: +1;
+
+    padding: 1rem;
+    background-color: white;
+}
+
+.modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}

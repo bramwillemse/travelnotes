@@ -1,0 +1,28 @@
+/**
+ * SUGGESTIONS
+ * List of search suggestions
+ */ 
+.suggestions {
+    display: block;
+    width: 100%;
+    margin: 0 0 1rem;
+    padding: 0;
+}
+
+.suggestions__item {
+    display: block;
+    margin: 0;
+    
+    padding: .333rem;
+
+    cursor: pointer;
+ 
+    &:nth-child(odd) {
+        background-color: #EEE;
+    }
+
+    &:hover,
+    &:active {
+        background-color: #CCC;
+    }    
+}
