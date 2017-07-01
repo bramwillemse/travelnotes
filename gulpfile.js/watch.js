@@ -1,17 +1,14 @@
 'use strict';
 
-// Required modules
-var gulp = require('gulp'),
-	browserSync = require('browser-sync');
+/** 
+ * TASK: WATCH
+ */
 
-
-
-// Settings
+var gulp = require('gulp');
+var browserSync = require('browser-sync');
 var	reload = browserSync.reload;
 
 
-
-// Task: Static Server + watching scss/html files
 gulp.task('watch', function() {
     
     // Watch Templates

@@ -15,7 +15,15 @@ export default {
             <p>Search query is: {{ search.query }}</p>
 
             <ul class="search-results">
-                <li v-for="result in search.results.locations" class="search-results__item">{{ result.title }}</li>
+                <li v-for="result in search.results.notes" class="search-results__item">
+                    {{ result.title }}
+                </li>
+            </ul>
+
+            <ul class="search-results">
+                <li v-for="result in search.results.locations" class="search-results__item">
+                    {{ result.title }}
+                </li>
             </ul>
         </section>
     `,
@@ -35,7 +43,7 @@ export default {
                     notes: [
                         {
                             id: 1,
-                            title: 'Hostal Thingy, Buenos Aires, Argentina'
+                            title: 'Hostal, Buenos Aires, Argentina'
                         },
                         {
                             id: 2,

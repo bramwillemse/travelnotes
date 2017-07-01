@@ -17,18 +17,18 @@ var browserSync     = require('browser-sync');
 var debug           = require('gulp-debug');
 
 
-// Postcss plugins
+// PostCSS plugins
 var plugins = [
-    stylelint(),
-    autoprefixer({browsers: ['> 1%'], cascade: false}),
-    // Pretty reporting config
-    reporter({
-        clearMessages: true,
-        throwError: false
-    })
-];
+        stylelint(),
+        autoprefixer({browsers: ['> 1%'], cascade: false}),
+        reporter({ // Pretty reporting config
+            clearMessages: true,
+            throwError: false
+        })
+    ];
 
 
+// Task: Stylelint
 gulp.task('style:lint', function(){
     return gulp.src([
         './src/styles/*.scss',
@@ -39,7 +39,7 @@ gulp.task('style:lint', function(){
 });
 
 
-// Task: Compile sass into CSS, compress and auto-inject into browsers
+// Task: Sass Compilation, compression & injection
 gulp.task('style', ['style:lint'] ,function() {
 	return gulp.src([
 			'./src/styles/*.scss',
