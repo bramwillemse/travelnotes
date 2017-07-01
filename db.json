@@ -1,4 +1,12 @@
 {
+    "dom": [{
+        "search": {
+            "title": "Search things"
+        },
+        "modal": {
+            "title": "Modal"
+        }
+    }],
     "notes": [{
         "id": 1,
         "location": {

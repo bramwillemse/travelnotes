@@ -2,7 +2,7 @@
 
 // Default Gulp task
 // Include all gulp files
-require('require-dir')('./', {recurse: true});
+require('require-dir')('./', { recurse: true });
 
 
 // Required modules

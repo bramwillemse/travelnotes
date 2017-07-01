@@ -13,32 +13,10 @@
             <h1 class="header__title">Travel Notes</h1>
         </header>
 
-
-        <div class="modal">
-         <button v-on:click="show = !show">Toggle</button>
-        <transition name="fade">
-            <p v-if="show">hello</p>
-        </transition>
-
-            <button class="button button--rounded button--close modal__close">X</button>
-
-            <form class="form form--search-location">
-                <input class="input" type="text" placeholder="i.e. Buenos Aires, Argentina">
-                <button class="button button--submit">Search</button>
-            </form>
-
-            <ul class="suggestions">
-                <li class="suggestions__item">Buenos Aires, Argentina</li>
-                <li class="suggestions__item">Buenos Aires, Argentina</li>
-                <li class="suggestions__item">Buenos Aires, Argentina</li>
-                <li class="suggestions__item">Buenos Aires, Argentina</li>
-                <li class="suggestions__item">Buenos Aires, Argentina</li>
-            </ul>
-        </div>
+        <search></search>
 
         <button class="button button--fixed button--rounded">+</button>
 
-        <notes></notes>
     </div>
 
     <script src="dist/scripts/app.js"></script>
