@@ -9,7 +9,15 @@ This is a prototype for an app in which you can:
 
 Right now I'm building it using:
 - Sass (SCSS)
-- JS (ES6 / Babel)
-- Vue.js
+- JS (ES6)
+-- Vue.js
+-- Fuse.js
 
-Check out my blog for more info: http://bramwillemse.nl/travel-notes
+## Setup
+To build and run this project set the correct local URL in `gulpfile.js/serve.js` (tvn.dev is my default) and run the following terminal commands:
+1. `npm install`
+2. `gulp`
+3. `npm run api`
+
+
+_Check out my blog for more info: http://bramwillemse.nl/travel-notes_
