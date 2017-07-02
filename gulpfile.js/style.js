@@ -28,17 +28,6 @@ var plugins = [
     ];
 
 
-// Task: Stylelint
-gulp.task('style:lint', function(){
-    return gulp.src([
-        './src/styles/*.scss',
-        '!.src/sass/vendor/**.*.scss'
-    ])
-    .pipe(postcss(plugins, {syntax: syntax_scss}))
-
-});
-
-
 // Task: Sass Compilation, compression & injection
 gulp.task('style', ['style:lint'] ,function() {
 	return gulp.src([
@@ -59,4 +48,15 @@ gulp.task('style', ['style:lint'] ,function() {
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('dist/styles'))
 		.pipe(browserSync.stream());
+});
+
+
+// Sub task: Stylelint
+gulp.task('style:lint', function(){
+    return gulp.src([
+        './src/styles/*.scss',
+        '!.src/sass/vendor/**.*.scss'
+    ])
+    .pipe(postcss(plugins, {syntax: syntax_scss}))
+
 });
