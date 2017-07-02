@@ -4,53 +4,6 @@ import Fuse from 'fuse.js'
 
 export default {
     name: 'search',
-    template: `
-        <section class="search">
-            <h1>{{search.title}}</h1>
-            
-            <form class="form form--search-location">
-                <input v-model="query" class="input" type="text" :placeholder="search.input.placeholder">
-                <button class="button button--submit">{{ search.button.label }}</button>
-            </form>    
-
-            <p>Search query is: {{ query }}</p>
-
-            <ul class="search-results">
-                <li v-for="result in notes" class="search-results__item">
-                    {{ result.title }}
-                </li>
-            </ul>
-
-            <ul class="search-results">
-                <li v-for="result in locations" class="search-results__item">
-                    {{ result.title }}
-                </li>
-            </ul>
-        </section>
-    `,
-
-    mounted() {
-        var options = {
-            keys: [
-                "title",
-                "city",
-                "country",
-                "text"
-            ]
-        };
-
-        this.fuse = new Fuse(this.notes, options)
-        this.result = this.notes
-    },
-
-    watch: {
-        query() {
-            if (this.query.trim() === '')
-                this.result = this.notes
-            else
-                this.result = this.fuse.search(this.notes)
-        }
-    },
 
     data() { 
         return {
@@ -86,8 +39,58 @@ export default {
         }
     },
 
+    template: `
+        <section class="search">
+            <h1>{{search.title}}</h1>
+            
+            <form class="form form--search-location">
+                <input v-model="query" class="input" type="text" :placeholder="search.input.placeholder">
+                <button class="button button--submit">{{ search.button.label }}</button>
+            </form>    
+
+            <p>Search query is: {{ query }}</p>
+
+            <ul class="search-results">
+                <li v-for="result in results" class="search-result">
+                    <p>
+                        <h2 class="search-result__title">{{ result.title }}</h2>
+                        <span class="search-result__location">{{ result.location.city }}, {{ result.location.country }}</span>
+                        <span class="search-results__text">{{ result.text }}</span>
+                    </p>
+                </li>
+            </ul>
+        </section>
+    `,
+
     created() {
         return axios.get('http://localhost:3003/notes') // get all notes
-            .then(response => this.notes = response.data)
-    }    
+            .then(
+                response => {
+                    var options = {
+                        keys: [
+                            "title",
+                            "location.city",
+                            "location.country",
+                            "text"
+                        ]
+                    }
+
+                    this.fuse = new Fuse(response.data, options),
+                    this.results = response.data
+                }
+                
+            )
+    },
+
+    mounted() {
+    },
+
+    watch: {
+        query() {
+            if (this.query.trim() === '')
+                this.results = this.notes
+            else
+                this.results = this.fuse.search(this.query.trim())
+        }
+    }
 }
