@@ -18,37 +18,17 @@ export default {
                 }
             },
             notes: [],
-            locations: [
-                {
-                    id: 1,
-                    title: 'Buenos Aires, Argentina'
-                },
-                {
-                    id: 2,
-                    title: 'Buenos Aires, Blabla'
-                },
-                {
-                    id: 3,
-                    title: 'Buenos Aires, Jemoeder'
-                },
-                {
-                    id: 4,
-                    title: 'Buenos Aires, Jeweetzelluf'
-                }
-            ]
+            locations: []
         }
     },
 
     template: `
-        <section class="search">
-            <h1>{{search.title}}</h1>
-            
+        <section class="search">            
             <form class="form form--search-location">
-                <input v-model="query" class="input" type="text" :placeholder="search.input.placeholder">
+                <label for="search">Search</label>
+                <input name="search" v-model="query" class="input" type="text" :placeholder="search.input.placeholder">
                 <button class="button button--submit">{{ search.button.label }}</button>
             </form>    
-
-            <p>Search query is: {{ query }}</p>
 
             <ul class="search-results">
                 <li v-for="result in results" class="search-result">
@@ -67,6 +47,12 @@ export default {
             .then(
                 response => {
                     var options = {
+                        shouldSort: true,
+                        threshold: 0.3,
+                        location: 0,
+                        distance: 200,
+                        maxPatternLength: 32,
+                        minMatchCharLength: 1,                        
                         keys: [
                             "title",
                             "location.city",
