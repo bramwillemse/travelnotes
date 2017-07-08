@@ -1,6 +1,7 @@
 // Vendor
 import axios from 'axios'
 import Fuse from 'fuse.js'
+import search from './services/search'
 
 export default {
     name: 'search',
@@ -46,23 +47,10 @@ export default {
         return axios.get('http://localhost:3003/notes') // get all notes
             .then(
                 response => {
-                    var options = {
-                        shouldSort: true,
-                        threshold: 0.3,
-                        location: 0,
-                        distance: 200,
-                        maxPatternLength: 32,
-                        minMatchCharLength: 1,                        
-                        keys: [
-                            "title",
-                            "location.city",
-                            "location.country",
-                            "text"
-                        ]
-                    }
+                    let results = response.data
 
-                    this.fuse = new Fuse(response.data, options),
-                    this.results = response.data
+                    search.init(results) // init Fuse instance
+                    this.results = results // update state
                 }
                 
             )
@@ -73,10 +61,12 @@ export default {
 
     watch: {
         query() {
-            if (this.query.trim() === '')
+            let query = this.query.trim()
+
+            if (query === '')
                 this.results = this.notes
             else
-                this.results = this.fuse.search(this.query.trim())
+                this.results = this.fuse.search(query)
         }
     }
 }
