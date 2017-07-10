@@ -1,17 +1,18 @@
 // Vendor
 import axios from 'axios'
 import Fuse from 'fuse.js'
-import search from './services/search'
+import search from '../services/search'
 
 export default {
     name: 'search',
 
     data() { 
         return {
-            query: '',
+            query: '', // search input value
             search: {
                 title: 'Search locations',
                 input: {
+                    label: 'Search',
                     placeholder: 'i.e. Buenos Aires, Argentina'
                 },   
                 button: {
@@ -49,7 +50,7 @@ export default {
                 response => {
                     let results = response.data
 
-                    search.init(results) // init Fuse instance
+                    search.initNotes(results) // init Fuse instance
                     this.results = results // update state
                 }
                 
@@ -60,13 +61,14 @@ export default {
     },
 
     watch: {
-        query() {
+        query() { // search when query changes
             let query = this.query.trim()
 
-            if (query === '')
+            if (query === '') // show all if no query is given
                 this.results = this.notes
-            else
+            else // show fuse results
                 this.results = this.fuse.search(query)
+
         }
     }
 }
