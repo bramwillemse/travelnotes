@@ -34,7 +34,7 @@ gulp.task('style', ['style:lint'] ,function() {
 			'./src/styles/*.scss',
 			'!.src/styles/**/_*.scss'
 		])
-		.pipe(sourcemaps.init())
+        .pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(
 			sass({
 				sourceComments: 'map',

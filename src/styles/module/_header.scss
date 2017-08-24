@@ -3,5 +3,12 @@
  * General header element
  */
 .header {
-    margin: 0 1rem 1rem;
+    padding: .5rem 2rem;
+    background: $grey-20;
+
+    &__title {
+        margin-bottom: 0;
+
+        font-size: 1rem;
+    }
 }

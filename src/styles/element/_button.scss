@@ -3,23 +3,19 @@
     margin-bottom: 1rem;
 
     padding: 1rem;
-    background-color: orange;
+    background-color: transparent;
     border: none;
-    box-shadow: 
-        .1rem .2rem .3rem .1rem rgba(0, 0, 0, .1),  
-        .1rem .2rem 1.3rem .1rem rgba(0, 0, 0, .3);
+    outline: none;
 
     font-size: 1rem;
     font-weight: 600;
-    color: white;
+    color: $grey-30;
 
-    transition: all .333s linear;
+    transition: all .166s linear;
 
-    &:hover {
-        background-color: orange;
-        box-shadow: 
-            0rem .1rem .3rem .1rem rgba(0, 0, 0, .1),  
-            0rem .1rem 1rem .1rem rgba(0, 0, 0, .3);
+    &:hover, 
+    &:focus {
+        color: $grey-90;
     }
 
     &--rounded {
@@ -36,5 +32,15 @@
         right: 1rem;
         bottom: 1rem;
         z-index: +1;
+
+        background: $grey-20;
+        color: $grey-90;
+
+        &:hover,
+        &:focus {
+            background-color: $grey-90;
+
+            color: $white;
+        }
     }
 }

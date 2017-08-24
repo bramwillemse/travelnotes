@@ -133,7 +133,6 @@
         "selector-list-comma-space-after": "never-single-line",
         "selector-list-comma-space-before": "never",
         "selector-max-empty-lines": 1,
-        "selector-no-id": true,
         "selector-no-qualifying-type": [
             true,
             ignore: ["attribute", "class"]

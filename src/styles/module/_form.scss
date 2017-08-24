@@ -1,10 +1,29 @@
 /** 
  * FORM
  */ 
-.form {
+.form { display: block; }
+
+.form__label { 
     display: block;
 
-    &--search-location {
-        margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.form__input { 
+    padding: .5rem 0;
+    border: 0;
+    border-bottom: 3px solid $grey-30;
+    outline: none;
+
+    color: $grey-90;
+
+    transition: all .166s linear;
+
+    &:placeholder {
+        color: $grey-30;
+    }
+
+    &:focus {
+        border-color: $grey-90;
     }
 }

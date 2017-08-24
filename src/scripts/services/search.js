@@ -4,7 +4,7 @@ import Fuse from 'fuse.js'
  * INIT SEARCH
  * Initiate a Fuse instance with data
  */
-function initNotes(data) {
+function init(data) {
     const options = {
         shouldSort: true,
         threshold: 0.3,
@@ -20,14 +20,14 @@ function initNotes(data) {
         ]
     }
 
-    this.fuse = new Fuse(data, options)
+    return new Fuse(data, options)
 }
 
-function queryNotes(input) {
-    console.log('queryNotes')
+function query(query) {
+    console.log('notes queried, with:' + query)
 }
 
 export default {
-    initNotes,
-    queryNotes
+    init,
+    query
 }

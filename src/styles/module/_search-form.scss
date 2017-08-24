@@ -1,0 +1,35 @@
+.search-form {
+    display: flex;
+    flex-flow: row wrap;
+
+    padding: 1rem 2rem;
+    background: $grey-10;
+
+    font-size: 2rem;
+}
+
+.search-form__label {
+    display: none;
+    flex: 2 100%;
+}
+
+.search-form__input {
+    flex: 1;
+    
+    background-color: $grey-10;
+
+    font-size: 2rem;
+}
+
+.search-form__button {
+    margin-bottom: 0;
+
+    border-bottom: 3px solid $grey-30;
+
+    font-size: 2rem;
+
+    &:focus, 
+    &:hover {
+        border-color: $grey-90;
+    }
+}

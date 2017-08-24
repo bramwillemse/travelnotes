@@ -1,4 +1,9 @@
 /** 
+ * SETTINGS
+ */
+@import "_settings/color";
+
+/** 
  * BASE
  */
 @import "base";
@@ -20,11 +25,15 @@
 /**
  * MODULE
  */
+@import "module/app";
 @import "module/header";
 @import "module/form";
 @import "module/modal";
 @import "module/notes";
 @import "module/note";
+@import "module/search";
+@import "module/search-form";
+@import "module/search-results";
 @import "module/suggestions";
 
 /** 
